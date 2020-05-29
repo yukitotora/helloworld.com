@@ -25,7 +25,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class Coment(models.Model):
+class Comment(models.Model):
     text = models.TextField('本文')
     target = models.ForeignKey(Post, on_delete=models.PROTECT, verbose_name='どの記事へのコメントか')
 
