@@ -1,0 +1,21 @@
+{% extends 'myprofile/base.html' %}
+
+{% block title %}Hoge's Profile{% endblock %}
+
+{% block content %}
+  <h1>{{name}}についての概要</h1>
+  <p>東京に住んでいます</p>
+
+  <h2>趣味</h2>
+  <ul>
+    <li>読書</li>
+  </ul>
+  他のいろいろなコンテンツ
+  <ul>
+    <li><a href="{% url 'diaries:top' %}">日記</a></li>
+    <li><a href="{% url 'reviews:review_list' %}">口コミサイト</a></li>
+    <li><a href="{% url 'videos:video_list' %}">動画</a></li>
+    <li><a href="{% url 'blog:post_list' %}">ブログ</a></li>
+    <li><a href="{% url 'contact:top' %}">お問い合わせ</a></li>
+  </ul>
+{% endblock %}
