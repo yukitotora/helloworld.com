@@ -13,8 +13,8 @@ class Top(generic.FormView):
     def form_valid(self, form):
         subject = 'お問い合わせがありました'
         message = render_to_string('contact/mail.txt', form.cleaned_data, self.request)
-        from_email = 'yukitotora@gmail.com'
-        recipient_list = ['yukitotora@gmail.com']
+        from_email = 'hoge@gmail.com'
+        recipient_list = ['hoge@gmail.com']
         send_mail(subject, message, from_email, recipient_list)
         return redirect('contact:thanks')
 
