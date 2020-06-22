@@ -15,3 +15,9 @@
 - python manage.py runserver: サーバーの起動
 - 起動後に<http://127.0.0.1:8000/>にアクセスするとプロフィールページが表示される
 - プロフィールページに他のコンテンツにアクセスするためのリンクがある
+
+## Dockerでの使い方
+以下の手順で使用します
+- docker build -t <Dockerイメージ名> <helloworld.comのDockerfileが存在するディレクトリ>
+- docker run -it -d -p 8000:8000 --name <コンテナ名> <Dockerイメージ名>
+- 起動後に<http://127.0.0.1:8000/>にアクセスするとプロフィールページが表示される
